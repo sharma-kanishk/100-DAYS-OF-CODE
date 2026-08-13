@@ -6,7 +6,7 @@ int main(){
       printf("Enter the value of n : "); /* represents the total number of terms or the last positive integer you want to add up in the sequence starting from 1*/
       scanf("%d",&n);
       sum = n * (n+1) / 2;
-      printf("sum = %d", sum);
+      printf("sum = %d", sum); // formula for sum of n natural numbers = n * (n+1) / 2
       return 0;
 }
      
