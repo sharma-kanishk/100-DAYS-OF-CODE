@@ -8,15 +8,17 @@ int main() {
     scanf("%d", &num);
 
     // Check conditions using an if-else ladder
-    if (num > 0) {
+    if (num >= 0) {
+       if (num == 0) {
+          printf("Zero");
+       }
+       else {
         printf("%d is a positive number.\n", num);
+       }
     } 
     else if (num < 0) {
         printf("%d is a negative number.\n", num);
     } 
-    else {
-        printf("The number is zero.\n");
-    }
-
+   
     return 0;
 }
