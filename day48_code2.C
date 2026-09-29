@@ -3,7 +3,7 @@
 
 int main() {
     char str[200];
-    int i, start, end, j;
+    int i, start, end, j, k;
     char temp;
 
     printf("Enter a sentence: ");
@@ -19,21 +19,34 @@ int main() {
             continue;
         }
 
-        // Find the start of the word
+        // Stop if newline is reached
+        if (str[i] == '\n') {
+            break;
+        }
+
+        // Find start of word
         start = i;
 
-        // Find the end of the word
-        while (str[i] != ' ' && str[i] != '\0' && str[i] != '\n') {
+        // Find end of word
+        while (str[i] != ' ' &&
+               str[i] != '\0' &&
+               str[i] != '\n') {
             i++;
         }
 
         end = i - 1;
 
         // Reverse the word
-        for (j = start; j < end; j++, end--) {
+        j = start;
+        k = end;
+
+        while (j < k) {
             temp = str[j];
-            str[j] = str[end];
-            str[end] = temp;
+            str[j] = str[k];
+            str[k] = temp;
+
+            j++;
+            k--;
         }
     }
 
