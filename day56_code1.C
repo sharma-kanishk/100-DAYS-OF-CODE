@@ -17,7 +17,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    printf("Next Greater Elements:\n");
+    printf("Next Greater Elements: ");
 
     for (int i = 0; i < n; i++)
     {
@@ -32,7 +32,13 @@ int main()
             }
         }
 
-        printf("Next greater element of %d = %d\n", arr[i], nextGreater);
+        printf("%d", nextGreater);
+
+        // Print comma except after last element
+        if (i < n - 1)
+        {
+            printf(", ");
+        }
     }
 
     return 0;
